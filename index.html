@@ -949,6 +949,23 @@
              alert(`Thank you ${name}! Your message has been received. I'll get back to you shortly.`);
         });
     </script>
+<!-- Add this HTML before </body> -->
+<div class="loader">
+    <div class="loader-spinner"></div>
+</div>
+
+<!-- Update your existing JavaScript to include this: -->
+<script>
+    // Loader
+    window.addEventListener('load', function() {
+        const loader = document.querySelector('.loader');
+        setTimeout(() => {
+            loader.classList.add('hidden');
+        }, 1000); // Adjust time as needed
+    });
+    
+    // Rest of your existing JavaScript...
+</script>
 </body>
 </html>
 
